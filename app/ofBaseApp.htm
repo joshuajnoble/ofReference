@@ -1,0 +1,31 @@
+<h3 id="setup">setup()</h3>
+<p>This function gets called once, at the start of the app. It's where you allocate variables, initialize camera communication, load data, begin communication with a local or remoate service, and generally prepare your application.</p>
+<h3 id="update">void update()</h3>
+<p>This function gets called repeatedly, each frame. It gets just before draw, so it is an ideal place to do any updating of variables, checking files or peripherals, or any other preparation for drawing.</p>
+<h3 id="draw">void draw()</h3>
+<p>This function gets called regularly just after update. It's where you draw things.</p>
+<h3 id="exit">void exit()</h3>
+<p>Add this function to your testApp to have it called at the moment before the app is terminated. This is useful for doing cleanup stuff or making sure files are saved before the app terminates. This happens before the destructor of the app instance is called.</p>
+<h3 id="windowResized">void windowResized(int w, int h)</h3>
+<p>This function gets called when ever we resize the application window. You receive the new width (w) and the new height (h) of the window.</p>
+<h3 id="keyPressed">void keyPressed( int key )</h3>
+<p>This function gets called when a key is pressed. The value key can be tested against.</p>
+<pre><code>There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
+</code></pre>
+<h3 id="keyReleased">void keyReleased( int key )</h3>
+<p>This function gets called when a key is released. The value key can be tested against.</p>
+<pre><code>There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
+</code></pre>
+<h3 id="mouseMoved">void mouseMoved( int x, int y )</h3>
+<p>This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse.</p>
+<h3 id="mouseDragged">void mouseDragged( int x, int y, int button )</h3>
+<p>This function gets when ever the mouse is dragged. You receive the x and y corrdinates of the mouse.</p>
+<h3 id="mousePressed">void mousePressed( int x, int y, int button )</h3>
+<p>This function gets when ever the mouse pressed. You receive the x and y corrdinates of the mouse and the button that is pressed</p>
+<h3 id="mouseReleased">void mouseReleased()</h3>
+<p>This function gets when ever the mouse moves.</p>
+<h3 id="mouseReleased_1">void mouseReleased(int x, int y, int button )</h3>
+<p>This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse and the button that was released.</p>
+<h3 id="dragEvent">void dragEvent(ofDragInfo dragInfo)</h3>
+<p>Sends an <a href="../events/ofEvents#ofDragInfo">ofDragInfo</a> event.</p>
+<h3 id="gotMessage">void gotMessage(ofMessage msg)</h3>
