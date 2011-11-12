@@ -41,7 +41,7 @@ This function gets when ever the mouse moves.
 This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse and the button that was released.
 		
 ### void dragEvent(ofDragInfo dragInfo) ###  {#dragEvent}
-Sends an [ofDragInfo](../events/ofEvents#ofDragInfo) event.
+Sends an [ofDragInfo](../events/ofEvents.htm#ofDragInfo) event.
 
 ### void gotMessage(ofMessage msg) ###  {#gotMessage}
 	
