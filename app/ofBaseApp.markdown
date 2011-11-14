@@ -17,13 +17,13 @@ This function gets called when ever we resize the application window. You receiv
 ### void keyPressed( int key ) ###  {#keyPressed}
 This function gets called when a key is pressed. The value key can be tested against.
 
-	There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT 
+There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT 
 
 
 ### void keyReleased( int key ) ###  {#keyReleased}
 This function gets called when a key is released. The value key can be tested against.
 
-	There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
+There are more complicated character codes, for keys such as F1-F12, Down, Enter: OF_KEY_BACKSPACE, OF_KEY_RETURN, OF_KEY_PRINTSCR, OF_KEY_F1 - OF_KEY_F12, OF_KEY_LEFT, OF_KEY_UP, OF_KEY_RIGHT, OF_KEY_DOWN, OF_KEY_PAGE_UP, OF_KEY_PAGE_DOWN, OF_KEY_HOME, OF_KEY_END, OF_KEY_INSERT
 
 ### void mouseMoved( int x, int y ) ###  {#mouseMoved}
 This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse.
@@ -39,9 +39,8 @@ This function gets when ever the mouse moves.
 
 ### void mouseReleased(int x, int y, int button ) ###  {#mouseReleased}
 This function gets when ever the mouse moves. You receive the x and y corrdinates of the mouse and the button that was released.
-		
+	
 ### void dragEvent(ofDragInfo dragInfo) ###  {#dragEvent}
 Sends an [ofDragInfo](../events/ofEvents.htm#ofDragInfo) event.
 
 ### void gotMessage(ofMessage msg) ###  {#gotMessage}
-	

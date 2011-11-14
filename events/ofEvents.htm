@@ -68,4 +68,144 @@
 <h3 id="void_ofunregistergetmessageslistenerclass__listener">void ofUnregisterGetMessages(ListenerClass * listener)</h3>
 <p>Stop the listener from listening to message events.</p>
 <h3 id="void_ofunregisterdrageventslistenerclass__listener">void ofUnregisterDragEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to drag events.</p><h2 id="ofdraginfo">ofDragInfo</h2>
+<p>Passed to the <a href="../app/ofBaseApp.htm">ofBaseApp</a> in the <a href="../app/ofBaseApp.htm#dragEvent">dragEvent</a> method.</p>
+<h3 id="files">vector <string> files</h3>
+<p>All the files included in the drag events</p>
+<h3 id="position">ofPoint position</h3>
+<p>The location in the app where the drag event terminated, i.e. where you dropped the file/s.</p>
+<h2 id="ofKeyEventArgs">ofKeyEventArgs</h2>
+<p>Sent during <a href="../app/ofBaseApp.htm#keyPressed">keyPressed</a> and <a href="../app/ofBaseApp.htm#keyReleased">keyReleased</a> events.</p>
+<h2 id="ofMouseEventArgs">ofMouseEventArgs</h2>
+<p>Sent to [ofBaseApp}(../app/ofBaseApp.htm) during <a href="../app/ofBaseApp.htm#mousePressed">mousePressed</a> <a href="../app/ofBaseApp.htm#mouseReleased">mouseReleased</a> and <a href="../app/ofBaseApp.htm#mouseDrag">mouseDrag</a> notifications.</p>
+<h2 id="ofTouchEventArgs">ofTouchEventArgs</h2>
+<p>These are sent to any any registered listeners when the device detects touches. Most commonly this is the ofBaseApp in the <a href="../app/ofBaseApp.htm#touchDown">touchDown</a>, <a href="../app/ofBaseApp.htm#touchUp">touchUp</a>, <a href="../app/ofBaseApp.htm#touchUp">touchUp</a>, <a href="../app/ofBaseApp.htm#touchDoubleTap">touchDoubleTap</a>, <a href="../app/ofBaseApp.htm#touchCancelled">touchCancelled</a> method.</p>
+<h3 id="id">int id</h3>
+<p>The id of the touch.</p>
+<h3 id="time">int time</h3>
+<p>For taps or presses this is the time in seconds. Not currently used.</p>
+<h3 id="x">float x</h3>
+<p>Application coordinate location of the event</p>
+<h3 id="y">float y</h3>
+<p>Application coordinate location of the event</p>
+<h3 id="numTouches">int numTouches</h3>
+<p>How many touch points the event involves. Not currently used.</p>
+<h3 id="width">float width</h3>
+<p>The width of the touch area. Not currently used.</p>
+<h3 id="height">float height</h3>
+<p>The height of the touch area.  Not currently used.</p>
+<h3 id="angle">float angle</h3>
+<p>If there are two touches this is the angle between them.  Not currently used.</p>
+<h3 id="minoraxis">float minoraxis</h3>
+<p>The shorter axis of a touch area.  Not currently used.</p>
+<h3 id="majoraxis">float majoraxis</h3>
+<p>The longer axis of a touch area.  Not currently used.</p>
+<h3 id="pressure">float pressure</h3>
+<p>If your device is recording pressure, this represents the pressure of the touch.  Not currently used.</p>
+<h3 id="xspeed">float xspeed</h3>
+<p>For touch drag events, this is the approximation of the speed of the movement along the x-axis.  Not currently used.</p>
+<h3 id="yspeed">float yspeed</h3>
+<p>For touch drag events, this is the approximation of the speed of the movement along the y-axis.  Not currently used.</p>
+<h3 id="xaccel">float xaccel</h3>
+<p>For touch drag events, this is the approximation of the acceleration of the movement along the x-axis.  Not currently used.</p>
+<h3 id="yaccel">float yaccel</h3>
+<p>For touch drag events, this is the approximation of the acceleration of the movement along the y-axis.  Not currently used.</p>
+<h2 id="ofAudioEventArgs">ofAudioEventArgs</h2>
+<h3 id="buffer">float* buffer</h3>
+<h3 id="bufferSize">int bufferSize</h3>
+<h3 id="nChannels">int nChannels</h3>
+<h2 id="ofResizeEventArgs">ofResizeEventArgs</h2>
+<p>### int width  ### {#width}</p>
+<p>### int height ### {#height}</p>
+<h2 id="ofEvents">ofEvents</h2>
+<p>Below are the public methods of ofEvents</p>
+<h3 id="ofRegisterMouseEvents">void ofRegisterMouseEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has mousePressed, mouseReleased, mouseMoved, and mouseDragged methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterKeyEvents">void ofRegisterKeyEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has keyPressed, keyReleased methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterTouchEvents">void ofRegisterTouchEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has touchDown, touchMoved, touchUp, touchDoubleTap, touchCancelled methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterGetMessages">void ofRegisterGetMessages(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has a gotMessage method to handle the events being dispatched to it.</p>
+<h3 id="void_ofregisterdrageventslistenerclass__listener">void ofRegisterDragEvents(ListenerClass * listener)</h3>
+<p>Register the drag events to the listener. This assumes that the listener has the dragEvent method to handle the events being dispatched to it.</p>
+<h3 id="void_ofunregistermouseeventslistenerclass__listener">void ofUnregisterMouseEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to mouse events.</p>
+<h3 id="void_ofunregisterkeyeventslistenerclass__listener">void ofUnregisterKeyEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to key events.</p>
+<h3 id="void_ofunregistertoucheventslistenerclass__listener">void ofUnregisterTouchEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to touch events.</p>
+<h3 id="void_ofunregistergetmessageslistenerclass__listener">void ofUnregisterGetMessages(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to message events.</p>
+<h3 id="void_ofunregisterdrageventslistenerclass__listener">void ofUnregisterDragEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to drag events.</p><h2 id="ofdraginfo">ofDragInfo</h2>
+<p>Passed to the <a href="../app/ofBaseApp.htm">ofBaseApp</a> in the <a href="../app/ofBaseApp.htm#dragEvent">dragEvent</a> method.</p>
+<h3 id="files">vector <string> files</h3>
+<p>All the files included in the drag events</p>
+<h3 id="position">ofPoint position</h3>
+<p>The location in the app where the drag event terminated, i.e. where you dropped the file/s.</p>
+<h2 id="ofKeyEventArgs">ofKeyEventArgs</h2>
+<p>Sent during <a href="../app/ofBaseApp.htm#keyPressed">keyPressed</a> and <a href="../app/ofBaseApp.htm#keyReleased">keyReleased</a> events.</p>
+<h2 id="ofMouseEventArgs">ofMouseEventArgs</h2>
+<p>Sent to [ofBaseApp}(../app/ofBaseApp.htm) during <a href="../app/ofBaseApp.htm#mousePressed">mousePressed</a> <a href="../app/ofBaseApp.htm#mouseReleased">mouseReleased</a> and <a href="../app/ofBaseApp.htm#mouseDrag">mouseDrag</a> notifications.</p>
+<h2 id="ofTouchEventArgs">ofTouchEventArgs</h2>
+<p>These are sent to any any registered listeners when the device detects touches. Most commonly this is the ofBaseApp in the <a href="../app/ofBaseApp.htm#touchDown">touchDown</a>, <a href="../app/ofBaseApp.htm#touchUp">touchUp</a>, <a href="../app/ofBaseApp.htm#touchUp">touchUp</a>, <a href="../app/ofBaseApp.htm#touchDoubleTap">touchDoubleTap</a>, <a href="../app/ofBaseApp.htm#touchCancelled">touchCancelled</a> method.</p>
+<h3 id="id">int id</h3>
+<p>The id of the touch.</p>
+<h3 id="time">int time</h3>
+<p>For taps or presses this is the time in seconds. Not currently used.</p>
+<h3 id="x">float x</h3>
+<p>Application coordinate location of the event</p>
+<h3 id="y">float y</h3>
+<p>Application coordinate location of the event</p>
+<h3 id="numTouches">int numTouches</h3>
+<p>How many touch points the event involves. Not currently used.</p>
+<h3 id="width">float width</h3>
+<p>The width of the touch area. Not currently used.</p>
+<h3 id="height">float height</h3>
+<p>The height of the touch area.  Not currently used.</p>
+<h3 id="angle">float angle</h3>
+<p>If there are two touches this is the angle between them.  Not currently used.</p>
+<h3 id="minoraxis">float minoraxis</h3>
+<p>The shorter axis of a touch area.  Not currently used.</p>
+<h3 id="majoraxis">float majoraxis</h3>
+<p>The longer axis of a touch area.  Not currently used.</p>
+<h3 id="pressure">float pressure</h3>
+<p>If your device is recording pressure, this represents the pressure of the touch.  Not currently used.</p>
+<h3 id="xspeed">float xspeed</h3>
+<p>For touch drag events, this is the approximation of the speed of the movement along the x-axis.  Not currently used.</p>
+<h3 id="yspeed">float yspeed</h3>
+<p>For touch drag events, this is the approximation of the speed of the movement along the y-axis.  Not currently used.</p>
+<h3 id="xaccel">float xaccel</h3>
+<p>For touch drag events, this is the approximation of the acceleration of the movement along the x-axis.  Not currently used.</p>
+<h3 id="yaccel">float yaccel</h3>
+<p>For touch drag events, this is the approximation of the acceleration of the movement along the y-axis.  Not currently used.</p>
+<h2 id="ofAudioEventArgs">ofAudioEventArgs</h2>
+<h3 id="buffer">float* buffer</h3>
+<h3 id="bufferSize">int bufferSize</h3>
+<h3 id="nChannels">int nChannels</h3>
+<h2 id="ofResizeEventArgs">ofResizeEventArgs</h2>
+<p>### int width  ### {#width}</p>
+<p>### int height ### {#height}</p>
+<h2 id="ofEvents">ofEvents</h2>
+<p>Below are the public methods of ofEvents</p>
+<h3 id="ofRegisterMouseEvents">void ofRegisterMouseEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has mousePressed, mouseReleased, mouseMoved, and mouseDragged methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterKeyEvents">void ofRegisterKeyEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has keyPressed, keyReleased methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterTouchEvents">void ofRegisterTouchEvents(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has touchDown, touchMoved, touchUp, touchDoubleTap, touchCancelled methods to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterGetMessages">void ofRegisterGetMessages(ListenerClass * listener)</h3>
+<p>Register the mouse events to the listener. This assumes that the listener has a gotMessage method to handle the events being dispatched to it.</p>
+<h3 id="ofRegisterDragEvents">void ofRegisterDragEvents(ListenerClass * listener)</h3>
+<p>Register the drag events to the listener. This assumes that the listener has the dragEvent method to handle the events being dispatched to it.</p>
+<h3 id="ofUnregisterMouseEvents">void ofUnregisterMouseEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to mouse events.</p>
+<h3 id="ofUnregisterKeyEvents">void ofUnregisterKeyEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to key events.</p>
+<h3 id="ofUnregisterTouchEvents">void ofUnregisterTouchEvents(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to touch events.</p>
+<h3 id="ofUnregisterGetMessages">void ofUnregisterGetMessages(ListenerClass * listener)</h3>
+<p>Stop the listener from listening to message events.</p>
+<h3 id="ofUnregisterDragEvents">void ofUnregisterDragEvents(ListenerClass * listener)</h3>
 <p>Stop the listener from listening to drag events.</p>
