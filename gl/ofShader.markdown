@@ -26,7 +26,7 @@ type: GL_POINTS, GL_LINE_STRIP or GL_TRIANGLE_STRIP
 ### void setGeometryOutputCount(int count) ###
 You have to call this before linking the program with geometry shaders to set number of output vertices
 
-### int getGeometryMaxOutputCount() ###	### 
+### int getGeometryMaxOutputCount() ###
 returns maximum number of supported vertices for your graphics card
 
 
