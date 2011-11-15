@@ -139,11 +139,15 @@ ivec4 iv[2];
 
 set an array of uniform values on the shader using int[2] value. On the shader this looks like:
 
+This allows you to set multiple float uniforms.
+
 ```cpp
 float v[2];
 ```
 
 ### void setUniform2fv(const char* name, float* v, int count = 1) ###
+
+This allows you to set multiple vec2 uniforms.
 
 ```cpp
 vec2 v[2];
@@ -151,11 +155,15 @@ vec2 v[2];
 
 ### void setUniform3fv(const char* name, float* v, int count = 1) ###
 
+This allows you to set multiple vec3 uniforms.
+
 ```cpp
 vec3 v[2];
 ```
 
 ### void setUniform4fv(const char* name, float* v, int count = 1) ###
+
+This allows you to set multiple vec4 uniforms.
 
 ```cpp
 vec4 v[2];
@@ -165,35 +173,59 @@ vec4 v[2];
 // set attributes that vary per vertex (look up the location before glBegin)
 
 ### void setAttribute1s(GLint location, short v1) ###
+Set a short attribute, a short int, on the shader.
+
 ### void setAttribute2s(GLint location, short v1, short v2) ###
+Set two short attributes, a short int, on the shader.
+
 ### void setAttribute3s(GLint location, short v1, short v2, short v3) ###
+Set three short attributes, a short int, on the shader.
+
 ### void setAttribute4s(GLint location, short v1, short v2, short v3, short v4) ###
+Set four short attributes, a short int, on the shader.
 
 ### void setAttribute1f(GLint location, float v1) ###
+Set one float attributes on the shader.
+
 ### void setAttribute2f(GLint location, float v1, float v2) ###
+Set two float attributes on the shader.
+
 ### void setAttribute3f(GLint location, float v1, float v2, float v3) ###
+Set three float attributes on the shader.
+
 ### void setAttribute4f(GLint location, float v1, float v2, float v3, float v4) ###
+Set four float attributes on the shader.
 
 ### void setAttribute1d(GLint location, double v1) ###
+Set one double attribute on the shader.
+
 ### void setAttribute2d(GLint location, double v1, double v2) ###
+Set two double attribute on the shader.
+
 ### void setAttribute3d(GLint location, double v1, double v2, double v3) ###
+Set three double attribute on the shader.
+
 ### void setAttribute4d(GLint location, double v1, double v2, double v3, double v4) ###
+Set four double attribute on the shader.
 
 ### void printActiveUniforms() ###
+This prints out all the active uniforms to the console.
+
 ### void printActiveAttributes() ###
+This prints out all the active attributes to the console.
 
 ### bool setupShaderFromSource(GLenum type, string source) ###
-// these methods create and compile a shader from source or file
-// type: GL_VERTEX_SHADER, GL_FRAGMENT_SHADER, GL_GEOMETRY_SHADER_EXT etc.
-// advanced use
+these methods create and compile a shader from a string, type: GL_VERTEX_SHADER, GL_FRAGMENT_SHADER, GL_GEOMETRY_SHADER_EXT etc.
 
 ### bool setupShaderFromFile(GLenum type, string filename) ###
-// advanced use
+This are more of advanced use function and doesn't need.
 
 ### bool linkProgram() ###
-// links program with all compiled shaders
-// advanced use
+Links program with all compiled shaders. This is more of an advanced use method, as this is done automatically for you.
 
 ### GLuint& getProgram() ###
+This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This is all the shaders: vertex, geom, and frag.
 
 ### GLuint& getShader(GLenum type) ###
+This returns the GLuint for the actual shader object that is active on the graphics card. This is more of an advanced usage method, but can be helpful if you need to do something that the ofShader doesn't support currently. This returns only one of the shaders. You can pass GL_VERTEX_SHADER, GL_GEOMETRY_SHADER_EXT, GL_FRAGMENT_SHADER
+
