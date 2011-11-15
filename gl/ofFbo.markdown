@@ -1,7 +1,7 @@
 
 ## ofFbo ##
 
-ofFbo is an essay way to work with Frame Buffer Objects or fobs, which allow you to easily do off-screen rendering, very convenient for doing image filters or post-processing effects. 
+ofFbo is an easy way to work with Frame Buffer Objects or fobs, which allow you to easily do off-screen rendering, very convenient for doing image filters or post-processing effects. 
 
 As an example, with an fbo you can do some drawing to the fbo (instead of to the screen or a texture) and then do some blurring, maybe invert the colors, combine multiple images, all without needing to draw it to the screen until you're ready.
 

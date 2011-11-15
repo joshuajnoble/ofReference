@@ -51,6 +51,20 @@ Clears all the data from the texture
 ### void  loadData(float* data, int w, int h, int glFormat) ###
 Loads raw data from an array. Make sure to se the pixel type in the glFormat correctly.
 
+Loads into the texture the array of unsigned chars (data), with a given width (w) and height (h). You also pass in the format that the data is stored in (some options: GL_LUMINANCE, GL_RGB, GL_RGBA). For example, to upload a 200*100 pixel RGB array into an already allocated texture:
+
+
+unsigned char pixels[200*100];
+
+for (int i = 0; i < 200*100; i++){
+
+	pixels[i] = (int)(255 * ofRandomuf());
+
+}
+
+myTexture.loadData(pixels, 200, 100, GL_RGB);
+
+
 ### void  loadData(unsigned char* data, int w, int h, int glFormat) ###
 Loads raw data from an array. Make sure to se the pixel type  in the glFormat correctly.
 
@@ -67,7 +81,7 @@ Loads raw data from an ofPixels object.
 Loads raw data from an ofPixels object.
 
 ### void  loadScreenData(int x, int y, int w, int h) ###
-Load data from the current screen into this texture.
+Load data from the current screen into this texture. Grabs a region of the screen and loads it into the texture. Specifiy the position (x,y) you wish to grab from, with the width (w) and height (h) of the region. Make sure that you have allocated your texture (using allocate()) to be large enough to hold the region of the screen you wish to load.
 
 ### void  setAnchorPercent(float xPct, float yPct) ###
 
