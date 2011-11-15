@@ -4,6 +4,8 @@ ofCamera provides a camera onto a 3D scene. Some of the different properties of 
 
 ![FOV](/fov.gif)
 
+The far and near clip planes are the boundaries of what's visible in the camera. If you need more information on these, check http://www.falloutsoftware.com/tutorials/gl/gl0.htm
+
 ### void setFov(float f) ###
 Here you can set the field of view of the camera.
 
