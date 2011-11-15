@@ -174,39 +174,51 @@ vec4 v[2];
 
 ### void setAttribute1s(GLint location, short v1) ###
 Set a short attribute, a short int, on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute2s(GLint location, short v1, short v2) ###
 Set two short attributes, a short int, on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute3s(GLint location, short v1, short v2, short v3) ###
 Set three short attributes, a short int, on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute4s(GLint location, short v1, short v2, short v3, short v4) ###
 Set four short attributes, a short int, on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute1f(GLint location, float v1) ###
 Set one float attributes on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute2f(GLint location, float v1, float v2) ###
 Set two float attributes on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute3f(GLint location, float v1, float v2, float v3) ###
 Set three float attributes on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute4f(GLint location, float v1, float v2, float v3, float v4) ###
 Set four float attributes on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute1d(GLint location, double v1) ###
 Set one double attribute on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute2d(GLint location, double v1, double v2) ###
 Set two double attribute on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute3d(GLint location, double v1, double v2, double v3) ###
 Set three double attribute on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void setAttribute4d(GLint location, double v1, double v2, double v3, double v4) ###
 Set four double attribute on the shader.
+Attributes are different than uniforms in that you can pass an attribute to each vertex or fragment that is being shaded.
 
 ### void printActiveUniforms() ###
 This prints out all the active uniforms to the console.
