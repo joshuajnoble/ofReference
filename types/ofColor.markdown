@@ -3,11 +3,11 @@
 
 ofColor represents a color in openFrameworks and enables a lot of extra functionality like using RGB or HSB color spectrums, lerping or linearly interpolating between colors, or inverting colors, among other things. You're probably familiar with RGB colors already, but HSB is a big part of ofCOlor and it uses a hue value between 0 and 360 to determine what the hue of a color will be:
 
-![HSB](/hsb.png)
+![HSB](../types/hsb.png)
 
 The saturation determines how much of the hue versus white is present and brightness determines how much hue versus black is present:
 
-![SB](hsb-cone.jpg)
+![SB](../types/hsb-cone.jpg)
 
 ofColor is templated, which means that it has several different ways it can be created. These are probably best to leave as they are because there's already a few kinds type-deffed for you. You can make an ofFloatColor if you want to work with floating point numbers, ofShortColor if you want to work with ints, or the default ofColor, which uses unsigned char values.
 
@@ -145,7 +145,7 @@ The following
 
 will create this:
 
-![ofNorm](ofNormalize.png)
+![ofNorm](../types/ofNormalize.png)
 
 
 
@@ -268,6 +268,6 @@ Gives you access to the color as an array:
 [3] = a
 
 
-typedef ### ofColor_<unsigned char> ofColor ###
-typedef ### ofColor_<float> ofFloatColor ###
-typedef ### ofColor_<unsigned short> ofShortColor ###
+### typedef ofColor_<unsigned char> ofColor ###
+### typedef ofColor_<float> ofFloatColor ###
+### typedef ofColor_<unsigned short> ofShortColor ###
