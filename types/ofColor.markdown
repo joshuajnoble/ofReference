@@ -48,11 +48,11 @@ ofColor mom(255, 0, 0);
 ofColor c(mom, 122); // now c is 50% alpha red
 ```
 
-### static ### ofColor_<PixelType> fromHsb (float hue, float saturation, float brightness, float alpha = 255.f) ###
+### static ofColor_<PixelType> fromHsb (float hue, float saturation, float brightness, float alpha = 255.f) ###
 
 Allows you create a color from HSB settings. Important to note is that h is between 0 and 360, while s and b are between 0 and 1. The f
 
-### static ### ofColor_<PixelType> fromHex (int hexColor, float alpha = 255.f) ###
+### static ofColor_<PixelType> fromHex (int hexColor, float alpha = 255.f) ###
 
 This allows you to create a color from a hexadecimal value like 0xffffff (white) or oxff000088 (red with 1/2 alpha). You get an ofColor instance back from the method so you can use it like:
 
@@ -230,23 +230,41 @@ ofColor newRed = ofColor::red;
 ```
 
 ### ofColor_<PixelType> & operator = (float const & val) ###
-bool operator == (ofColor_<PixelType> const & color) ###
-bool operator != (ofColor_<PixelType> const & color) ###
+
+### bool operator == (ofColor_<PixelType> const & color) ###
+
+### bool operator != (ofColor_<PixelType> const & color) ###
+
 ### ofColor_<PixelType> operator + (ofColor_<PixelType> const & color) const ###
+
 ### ofColor_<PixelType> operator + (float const & val) const ###
+
 ### ofColor_<PixelType> & operator += (ofColor_<PixelType> const & color) ###
+
 ### ofColor_<PixelType> & operator += (float const & val) ###
+
 ### ofColor_<PixelType> operator - (ofColor_<PixelType> const & color) const ###
+
 ### ofColor_<PixelType> operator - (float const & val) const ###
+
 ### ofColor_<PixelType> & operator -= (ofColor_<PixelType> const & color) ###
+
 ### ofColor_<PixelType> & operator -= (float const & val) ###
+
 ### ofColor_<PixelType> operator * (ofColor_<PixelType> const & color) const ###
+
 ### ofColor_<PixelType> operator * (float const & val) const ###
+
 ### ofColor_<PixelType> & operator *= (ofColor_<PixelType> const & color) ###
+
 ### ofColor_<PixelType> & operator *= (float const & val) ###
+
 ### ofColor_<PixelType> operator / (ofColor_<PixelType> const & color) const ###
+
 ### ofColor_<PixelType> operator / (float const & val) const ###
+
 ### ofColor_<PixelType> & operator /= (ofColor_<PixelType> const & color) ###
+
 ### ofColor_<PixelType> & operator /= (float const & val) ###
 
 ### const PixelType & operator [] (int n) const ###
