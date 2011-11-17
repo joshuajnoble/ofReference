@@ -19,7 +19,7 @@ This is either ofColorShort(), ofColorFloat() or ofColor, or, if you're up to so
 
 This creates a color using RGB
 
-### ofColor_<PixelType> (const ### ofColor_<PixelType> & color) ###
+### ofColor_<PixelType> (const ofColor_<PixelType> & color) ###
 
 This copies a color:
 
@@ -28,7 +28,7 @@ ofColor mom(255, 0, 0);
 ofColor c(mom);
 ```
 
-### ofColor_<PixelType> (const ### ofColor_<PixelType> & color, float _a) ###
+### ofColor_<PixelType> (const ofColor_<PixelType> & color, float _a) ###
 
 ```cpp
 ofColor mom(255, 0, 0);
@@ -41,7 +41,7 @@ ofColor c(mom, 122); // now c is 50% alpha red
 ofColor c(0.5, 122); // now c is 50% alpha gray, ooh, dismal
 ```
 
-### ofColor_<PixelType> (const ### ofColor_<SrcType> & color) ###
+### ofColor_<PixelType> (const ofColor_<SrcType> & color) ###
 
 ```cpp
 ofColor mom(255, 0, 0);
@@ -149,7 +149,7 @@ will create this:
 
 
 
-### ofColor_<PixelType>& lerp(const ### ofColor_<PixelType>& target, float amount) ###
+### ofColor_<PixelType>& lerp(const ofColor_<PixelType>& target, float amount) ###
 
 This awesome method allows you set a color based on a another color and the amount of that color that you want it to be set to, so for instance, if you had red and wanted halfway between red and blue, you could do this:
 
@@ -171,7 +171,7 @@ Returns the inverted version of the color.
 
 Returns the normalized version of the color.
 
-### ofColor_<PixelType> getLerped(const ### ofColor_<PixelType>& target, float amount) const ###
+### ofColor_<PixelType> getLerped(const ofColor_<PixelType>& target, float amount) const ###
 
 Returns the lerped version of the color so you can make a new color from it, which is fun.
 
