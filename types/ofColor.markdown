@@ -183,13 +183,13 @@ Gets the hue of the color, between 0 and 360
 
 Gets the saturation of the color, between 0 and 1, that is, how much hue there is. No saturation and full brightness = white.
 
-### float getBrightness () const ### // brightest component
+### float getBrightness () const ###
 
 Gets the brightness of the color, that is, how black it is. No brightness = black.
 
-### float getLightness () const ### // average of the components
+### float getLightness () const ### 
 
-
+creates average of the components
 
 ### void getHsb(float& hue, float& saturation, float& brightness) const ###
 
