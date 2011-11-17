@@ -61,39 +61,39 @@ ofColor yellow = ofColor::fromHex(0xffff00);
 ofColor halfYellow = ofColor::fromHex(0xffff00, 122);
 ```
 
-### static const ### ofColor_<PixelType> gray ###
+### static const ofColor_<PixelType> gray ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> white ###
+### static const ofColor_<PixelType> white ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> red ###
+### static const ofColor_<PixelType> red ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> green ###
+### static const ofColor_<PixelType> green ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> blue ###
+### static const ofColor_<PixelType> blue ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> cyan ###
+### static const ofColor_<PixelType> cyan ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> magenta ###
+### static const ofColor_<PixelType> magenta ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> yellow ###
+### static const ofColor_<PixelType> yellow ###
 
 A color that you can use in your OF application.
 
-### static const ### ofColor_<PixelType> black ###
+### static const ofColor_<PixelType> black ###
 
 A color that you can use in your OF application.
 
@@ -187,7 +187,7 @@ Gets the saturation of the color, between 0 and 1, that is, how much hue there i
 
 Gets the brightness of the color, that is, how black it is. No brightness = black.
 
-### float getLightness () const ### 
+### float getLightness () const ###
 
 creates average of the components
 
