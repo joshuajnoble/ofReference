@@ -124,7 +124,14 @@ two = one;
 
 ### void setMesh(const ofMesh & mesh, int usage) ###
 
-This copies an ofMesh into an ofVbo, which is
+This copies an ofMesh into an ofVbo, which is a very easy way of creating a vbo.
+
+```cpp
+ofMesh m;
+vbo.setMesh(m, GL_DYNAMIC_DRAW);
+```
+
+This copies all the properties from the mesh, indices, vertices, colors, and texcoords, into the vbo.
 
 ### void setVertexData(const ofVec3f * verts, int total, int usage) ###
 
@@ -195,10 +202,40 @@ vbo.setVertexData(&Verts[0], 12, 36, GL_DYNAMIC_DRAW);
 
 ### void setColorData(const float * color0r, int total, int usage, int stride=0) ###
 
+This sets the colors for a vbo by using 3 floats for the color RGB rather than an ofFloatColor instance.
 
+
+```cpp
+
+float Colors[] = {...};
+vbo.setVertexData(&Colors[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
+
+```
 
 ### void setNormalData(const float * normal0x, int total, int usage, int stride=0) ###
+
+This sets the normals for a vbo by using 3 floats for the normal rather than an ofVec3f
+
+
+```cpp
+
+float Norms[] = {...};
+vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
+
+```
+
+
 ### void setTexCoordData(const float * texCoord0x, int total, int usage, int stride=0) ###
+
+This sets the texcoords for a vbo by using 2 floats for the texture coordinates rather than an ofVec2f
+
+
+```cpp
+
+float Norms[] = {...};
+vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if you want to update it later
+
+```
 
 ### void updateMesh(const ofMesh & mesh) ###
 
