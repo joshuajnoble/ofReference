@@ -1,4 +1,3 @@
-
 ## ofFbo ##
 
 ofFbo is an easy way to work with Frame Buffer Objects or fobs, which allow you to easily do off-screen rendering, very convenient for doing image filters or post-processing effects. 
@@ -101,7 +100,7 @@ This returnes the GLuint of Fbo for advanced actions.
 ### static bool	checkGLSupport() ###
 This ensures that your computer and graphics card support FBOs.
 
-### static int maxColorAttachments()
+### static int maxColorAttachments() ###
 This returnes the max number of simultaneous max color attachments.
 
 ### static int maxDrawBuffers() ###
@@ -111,10 +110,10 @@ This returnes the max number of simultaneous draw buffers.
 This gives you the maximum number of MSAA samples.
 
 ### GLuint getDepthBuffer() ###
-This gives you the OpenGL id of the depthBuffer that the fbo contains.
+This gives you the OpenGL id of the depthBuffer that the fbo contains. The depth buffer contains the z-ordering information for each pixel, i.e. what object should be appearing at each pixel according to the depth relative to the view.
 
-### GLuint getStencilBuffer() return stencilBuffer ###
-This gives you the OpenGL id of the depthBuffer that the fbo contains.
+### GLuint getStencilBuffer() ###
+This gives you the OpenGL id of the stencilBuffer that the fbo contains. A stencil buffer is typically used to add shadows to 3D applications or to do some kinds of reflections. It basically creates a per-pixel mask that can be used to determine which pixels to discard because of a shadow or a reflection.
 
 ## Settings ##
 
