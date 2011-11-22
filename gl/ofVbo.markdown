@@ -1,15 +1,14 @@
-
 ## ofVbo ##
 
-First things first: a Vertex Buffer Object (VBO) provides methods a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that instead of needing to upload new data each time, you can simply draw it instead of needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
+First things first: a Vertex Buffer Object (VBO) provides a way for you to create vertices, normals, colors, and texture coordinates on the graphics card for non-immediate mode rendering. This means that you can store it all on the graphics card and then access, update, or draw it, whenever you need. This is pretty convenient when you have something that you want to draw multiple times wihtout changing it much, because it means that, instead of needing to upload new data each time, you can simply draw it without needing to recreate all your vertices and colors, a philosophy which is probably familiar to you from working with the ofFbo or ofTexture.
 
 There are a few things that are important to understand about VBOs:
 
-Each property of the VBO, vertices, texCoords, normals, colors, can be either dynamic or static. You set it to static when you know that you won't be updating it later on. You set it to dynamic when you know you will be updating it later on.
+Each property of the VBO - vertices, texCoords, normals, colors - can be either dynamic or static. You set it to static when you know that you won't be updating it later on. You set it to dynamic when you know you will be updating it later on.
 
 Just like with ofMesh, you need to keep track of the vertices and their indices in order to make shapes and you can draw a VBO in any one of the OpenGL drawing modes, GL_LINE_STRIP, GL_POINTS, GL_QUADS, GL_TRIANGLES and GL_TRIANGLE_STRIP.
 
-Vertices are passed to your graphics card and your graphics card fill in the spaces in between them in a processing usually called “the rendering pipeline”. The rendering pipeline goes more or less like this:
+Vertices are passed to your graphics card and your graphics card fills in the spaces in between them in a process usually called the “rendering pipeline”. The rendering pipeline goes more or less like this:
 1. Say how you’re going to connect all the points.
 2. Make some points.
 3. Say that you’re done making points.
@@ -18,9 +17,9 @@ You may be thinking: “I’ll just make eight vertices and voila: a cube.” No
 
 ![gl vertices](gl_vertices_options.jpg)
 
-Generally you have to create your points to fit the drawing mode that you’ve selected because of what’s called “winding”. A vertex gets connected to another vertex in the order that the mode does it’s winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you’ll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If you’re thinking: “it would be nice if there were an abstraction layer for this” you’re thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
+Generally, you have to create your points to fit the drawing mode that you’ve selected because of what’s called “winding”. A vertex gets connected to another vertex in the order that the mode does its winding and this means that you might need multiple vertices in a given location to create the shape you want. The cube, for example, requires eighteen vertices, not the eight that you would expect. If you note the order of vertices in the GL chart above you’ll see that all of them use their vertices slightly differently (in particular you should make note of the GL_TRIANGLE_STRIP example). Drawing a shape requires that you keep track of which drawing mode is being used and which order your vertices are declared in. If you’re thinking “it would be nice if there were an abstraction layer for this”, you’re thinking right. Enter the mesh, which is really just an abstraction of the vertex and drawing mode that we started with but which has the added bonus of managing the draw order for you. That may seem insignificant at first, but it provides some real benefits when working with complex geometry.
 
-The following example shows an ofVbo representing an isocohedron:
+The following example shows an ofVbo representing an icosahedron:
 
 ```cpp
 
@@ -124,14 +123,14 @@ two = one;
 
 ### void setMesh(const ofMesh & mesh, int usage) ###
 
-This copies an ofMesh into an ofVbo, which is a very easy way of creating a vbo.
+This copies an ofMesh into an ofVbo, which is a very easy way of creating a VBO.
 
 ```cpp
 ofMesh m;
 vbo.setMesh(m, GL_DYNAMIC_DRAW);
 ```
 
-This copies all the properties from the mesh, indices, vertices, colors, and texcoords, into the vbo.
+This copies all the properties from the mesh, indices, vertices, colors, and texcoords, into the VBO.
 
 ### void setVertexData(const ofVec3f * verts, int total, int usage) ###
 
@@ -186,7 +185,7 @@ usage Specifies the expected usage pattern of the data store. The symbolic const
 
 vert0x Specifies a pointer to data that will be copied into the data store for initialization.
 
-numCoords This is the number of complete coordinates that youre adding to the vbo
+numCoords This is the number of complete coordinates that youre adding to the VBO
 
 total Specifies the number of objects that you're passing in.
 
@@ -202,7 +201,7 @@ vbo.setVertexData(&Verts[0], 12, 36, GL_DYNAMIC_DRAW);
 
 ### void setColorData(const float * color0r, int total, int usage, int stride=0) ###
 
-This sets the colors for a vbo by using 3 floats for the color RGB rather than an ofFloatColor instance.
+This sets the colors for a VBO by using 3 floats for the color RGB rather than an ofFloatColor instance.
 
 
 ```cpp
@@ -214,7 +213,7 @@ vbo.setVertexData(&Colors[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if
 
 ### void setNormalData(const float * normal0x, int total, int usage, int stride=0) ###
 
-This sets the normals for a vbo by using 3 floats for the normal rather than an ofVec3f
+This sets the normals for a VBO by using 3 floats for the normal rather than an ofVec3f
 
 
 ```cpp
@@ -227,7 +226,7 @@ vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if 
 
 ### void setTexCoordData(const float * texCoord0x, int total, int usage, int stride=0) ###
 
-This sets the texcoords for a vbo by using 2 floats for the texture coordinates rather than an ofVec2f
+This sets the texcoords for a VBO by using 2 floats for the texture coordinates rather than an ofVec2f
 
 
 ```cpp
@@ -239,7 +238,7 @@ vbo.setNormalData(&Norms[0], 12, 36, GL_DYNAMIC_DRAW); //use GL_DYNAMIC_DRAW if 
 
 ### void updateMesh(const ofMesh & mesh) ###
 
-This allows you add a mesh to to the vbo, like so:
+This allows you add a mesh to to the VBO, like so:
 
 ```cpp
 ofMesh m;
@@ -250,43 +249,43 @@ v.updateMesh(mesh);
 
 ### void updateVertexData(const ofVec3f * verts, int total) ###
 
-If you've created your vbo with vertexes that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. This is for 3D vbos.
+If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This is for 3D VBOs.
 
 ### void updateVertexData(const ofVec2f * verts, int total) ###
 
-If you've created your vbo with vertexes that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. This is for 2D vbos as it only uses ofVe2f.
+If you've created your VBO with vertices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This is for 2D VBOs as it only uses ofVe2f.
 
 ### void updateColorData(const ofFloatColor * colors, int total) ###
 
-If you've created your vbo with colors that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time.
+If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
 
 ### void updateNormalData(const ofVec3f * normals, int total) ###	
 
-If you've created your vbo with normals that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time.
+If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
 
 ### void updateTexCoordData(const ofVec2f * texCoords, int total) ###
 
-If you've created your vbo with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time.
+If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertices at any time.
 
 ### void updateIndexData(const ofIndexType * indices, int total) ###
 
-If you've created your vbo with indices that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. Note that if you're not adding or removing vertieces you probably don't need to update the vertices.
+If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. Note that if you're not adding or removing vertices you probably don't need to update the vertices.
 
 ### void updateVertexData(const float * ver0x, int total) ###
 
-If you've created your vbo with indices that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. Note that if you're not adding or removing vertieces you probably don't need to update the vertices.
+If you've created your VBO with indices that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. Note that if you're not adding or removing vertices you probably don't need to update the vertices.
 
 ### void updateColorData(const float * color0r, int total) ###
 
-If you've created your vbo with colors that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. This version uses 3 floats for the RGB of each color instead of ofColor.
+If you've created your VBO with colors that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 3 floats for the RGB of each color instead of ofColor.
 
 ### void updateNormalData(const float * normal0x, int total) ###
 
-If you've created your vbo with normals that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. This version uses 3 floats for each normal instead of an ofVec3f.
+If you've created your VBO with normals that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 3 floats for each normal instead of an ofVec3f.
 
 ### void updateTexCoordData(const float * texCoord0x, int total) ###
 
-If you've created your vbo with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertexes at any time. This version uses 2 floats for each tex coord instead of an ofVec2f.
+If you've created your VBO with texture coordinates that are using GL_DYNAMIC_DRAW then you can update the vertices at any time. This version uses 2 floats for each tex coord instead of an ofVec2f.
 
 ### GLuint getVertId() ###
 ### GLuint getColorId() ###
@@ -337,4 +336,4 @@ This is for advanced users who might want to use ways of drawing other than draw
 
 ### void clear() ###
 
-This erases your VBOs data from your graphics card, but not the VBO itself, so you can fill it with data again.
+This erases your VBO's data from your graphics card, but not the VBO itself, so you can fill it with data again.
