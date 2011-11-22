@@ -134,16 +134,16 @@ This sets whether the fbo will use a depth buffer or not.
 ### bool useStencil ###
 This sets whether the fbo will use a stencil buffer or not.
 
-### GLenum textureTarget ###	
+### GLenum textureTarget ###
 This defines how the texture of the fbo GL_TEXTURE_2D or GL_TEXTURE_RECTANGLE_ARB. By default this is GL_TEXTURE_RECTANGLE_ARB.
 
 ### GLint internalformat ###
 Represents the color mode of the fbo. Possible options are GL_RGBA, GL_RGBA16F_ARB, GL_RGBA32F_ARB, GL_LUMINANCE32F_ARB.
 
-### int	wrapModeHorizontal ### 
+### int	wrapModeHorizontal ###
 This sets how the fbo will wrap around vertical edges of an object that's too large for the fbo along the horizontal. Possible options are GL_NEAREST, GL_LINEAR etc.
 
-### int	wrapModeVertical ### 
+### int	wrapModeVertical ###
 This sets how the fbo will wrap around vertical edges of an object that's too large for the fbo along the vertical. Possible options are GL_NEAREST, GL_LINEAR etc.
 
 ### int	minFilter ###
